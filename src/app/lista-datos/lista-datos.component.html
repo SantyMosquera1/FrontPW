@@ -1,0 +1,18 @@
+<h1>Listado de Datos</h1>
+<ul>
+  <!-- Itera a través de la lista de objetos 'datos' y muestra cada uno en un elemento de lista -->
+  <li *ngFor="let dato of datos">
+    <!-- Muestra el valor del campo 'display_name' del objeto 'dato' -->
+    Display Name: {{ dato.display_name }},
+    <!-- Muestra el valor del campo 'title' del objeto 'dato' -->
+    Title: {{ dato.title }},
+    <!-- Muestra el valor del campo 'description' del objeto 'dato' -->
+    Description: {{ dato.description }},
+    <!-- Muestra el valor del campo 'display_name_prefixed' del objeto 'dato' -->
+    Display Name: {{ dato.display_name_prefixed }},
+    <!-- Crea un enlace utilizando la URL del campo 'url' del objeto 'dato' y se abre en una nueva pestaña -->
+    <a [href]="dato.url" target="_blank">Enlace</a>,
+    <!-- Muestra el valor del campo 'url' del objeto 'dato' -->
+    Url: {{ dato.url }}
+  </li>
+</ul>
